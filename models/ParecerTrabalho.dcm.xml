@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="ParecerTrabalho" table="parecer_trabalho">
+    <id name="seq" type="integer" column="seq">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="datahora" type="datetime" column="datahora" nullable="false"/>
+    <field name="status" type="integer" column="status" nullable="false"/>
+    <field name="statusIntroducao" type="integer" column="status_introducao" nullable="true"/>
+    <field name="statusObjetivos" type="integer" column="status_objetivos" nullable="true"/>
+    <field name="statusMetodologia" type="integer" column="status_metodologia" nullable="true"/>
+    <field name="statusResultados" type="integer" column="status_resultados" nullable="true"/>
+    <field name="observacoes" type="text" column="observacoes" nullable="true"/>
+    <field name="observacoesInternas" type="text" column="observacoes_internas" nullable="true"/>
+    <field name="autorCiente" type="integer" column="autor_ciente" nullable="true"/>
+    <field name="obsIntroducao" type="string" column="obs_introducao" length="200" nullable="true"/>
+    <field name="obsObjetivos" type="string" column="obs_objetivos" length="200" nullable="true"/>
+    <field name="obsMetodologia" type="string" column="obs_metodologia" length="200" nullable="true"/>
+    <field name="obsResultados" type="string" column="obs_resultados" length="200" nullable="true"/>
+    <one-to-one field="fkTrabalho" target-entity="Trabalho">
+      <join-columns>
+        <join-column name="fk_trabalho" referenced-column-name="id_trabalho"/>
+      </join-columns>
+    </one-to-one>
+    <many-to-one field="fkRevisor" target-entity="Revisor">
+      <join-columns>
+        <join-column name="fk_revisor" referenced-column-name="fk_usuario"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

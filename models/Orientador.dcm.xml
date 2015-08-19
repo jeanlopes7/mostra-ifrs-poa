@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Orientador" table="orientador">
+    <field name="tipoServidor" type="integer" column="tipo_servidor" nullable="false"/>
+    <field name="status" type="integer" column="status" nullable="false"/>
+    <one-to-one field="fkUsuario" target-entity="Usuario">
+      <join-columns>
+        <join-column name="fk_usuario" referenced-column-name="id_usuario"/>
+      </join-columns>
+    </one-to-one>
+    <many-to-many field="fkCampus" target-entity="Campus" inversed-by="fkOrientador">
+      <join-table name="orientador_campus">
+        <join-columns>
+          <join-column name="fk_orientador" referenced-column-name="fk_usuario"/>
+        </join-columns>
+        <inverse-join-columns>
+          <join-column name="fk_campus" referenced-column-name="id_campus"/>
+        </inverse-join-columns>
+      </join-table>
+    </many-to-many>
+  </entity>
+</doctrine-mapping>

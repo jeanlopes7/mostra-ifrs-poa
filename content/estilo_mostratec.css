@@ -1,0 +1,373 @@
+@charset "UTF-8";
+body{
+    margin:0;
+    padding:0;
+    background:#C3E191 /* url(logo.png) */ repeat fixed top left;
+<<<<<<< HEAD
+    font-family:Arial, Helvetica, sans-serif, 'Times New Roman';
+=======
+    font-family:Arial, Helvetica, sans-serif;
+>>>>>>> f9b405479b0aa4f88530d1c9535f52b197308e2e
+    font-size:12px;
+}
+a img{
+    border:none;
+}
+#conteudo{
+    padding:30px;
+<<<<<<< HEAD
+=======
+    /*margin:.5% 20% .5% 17%*/;
+>>>>>>> f9b405479b0aa4f88530d1c9535f52b197308e2e
+    margin: 5px auto;
+    width:960px;
+    height:auto;
+    min-width:800px;
+    min-height:600px;
+}
+#cont{
+    background:#FFF;
+    color:#000;
+    font-family:arial;
+    width:80%;
+    height:auto;
+    min-height:600px;
+    vertical-align:center;
+    margin:5px auto;
+    padding:10px;
+    margin-top:0px;
+    /*border-radius*/
+    -webkit-border-radius:7px;
+    -moz-border-radius:7px;
+    border-radius:7px;
+}
+
+#header{
+    float:left;
+    background:#FFF;
+    color:#000;
+    font-family:arial;
+    width:100%;
+    height:auto;
+    margin:15px auto;
+    padding:10px;
+    margin-top:0px;
+    /*border-radius*/
+    -webkit-border-radius:7px;
+    -moz-border-radius:7px;
+    border-radius:7px;
+    /*box-shadow*/
+    -webkit-box-shadow:0 0 10px rgba(0,51,0,.83);
+    -moz-box-shadow:0 0 10px rgba(0,51,0,.83);
+    box-shadow:0 0 10px rgba(0,51,0,.83);
+}
+#logo{
+    margin:20px 80px 20px 20px;
+    padding:5px;
+    width:200px;
+    height:62px;
+    float:left;
+}
+#frase{
+    margin:20px 20px 20px 80px; 
+    padding:5px;
+    width:auto;
+    height:62px;
+    font-family:arial;
+    font-size:25px;
+    font-style:italic;
+}
+
+#inner_content {
+    float:left;
+    background:#FFF;
+    color:#000;
+    font-family:arial;
+    width:100%;
+    height:auto;
+    margin:15px auto;
+    padding:10px;
+    margin-top:0px;
+    /*border-radius*/
+    -webkit-border-radius:7px;
+    -moz-border-radius:7px;
+    border-radius:7px;
+    /*box-shadow*/
+    -webkit-box-shadow:0 0 10px rgba(0,51,0,.83);
+    -moz-box-shadow:0 0 10px rgba(0,51,0,.83);
+    box-shadow:0 0 10px rgba(0,51,0,.83);
+}
+
+#inner_content_pdf {
+    float:left;
+    background:#FFF;
+    color:#000;
+    width:100%;
+    height:auto;
+    padding:10px;
+    margin-top:0px;
+}
+
+.css_mostra2015_texto_modal{
+	font-size: 125%;
+}
+.table_autor, .table_orientador{
+    margin-top: 30px;
+    margin-left: 10px;
+    width: 98%;
+}
+
+.table_autor td, .table_autor th, .table_autor tr {
+    border: 1px solid #000;
+    padding: 5px;
+}
+
+.table_orientador td, .table_orientador th, .table_orientador tr {
+    border: 1px solid #000;
+    padding: 5px;
+}
+
+.table_autor td, .table_orientador td{
+    width: auto;
+    text-align: center;
+    padding: 5px;
+}
+
+.table_autor th, .table_orientador th{
+    text-align: center;
+    background-color: #C3E191;
+}
+
+.t_trabalho{
+    width: 550px;
+}
+
+.p_chave{
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.tituloEditTrab{
+    width: 98%;
+    margin-left: 10px;
+    border: 1px solid #000;
+    background-color: #C3E191;
+    text-align: left;
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+.tituloEditTrab h5{
+    font-size: 14px;
+    font-weight: bold;
+}
+.edit_bt, .edit_b{
+    width: 98%;
+    margin: 10px;
+    font-size: 15px;
+}
+.edit_bt{
+    border: 1px solid #000;
+    font-size: 15px;
+    padding: 10px;
+
+}
+
+.texto-info{
+    font-size: 14px;
+    font-weight: normal;
+}
+.text-center{
+    padding: 10px;
+}
+.text-center p{
+    text-align: left;
+    margin-left: 5px;
+}
+
+.table_acoes{
+    width: 96%;
+    margin-left: 20px;
+    padding: 5px;
+}
+.table_acoes tr,td{
+    padding: 3px;
+    border: 1px solid #000;
+}
+.tab_autor, .tab_orientador{
+    margin: 5px auto;
+    width: 98%;
+    font-size: 13px;
+    text-align: center;
+}
+.sub_autor, .sub_orientador{
+    border: 1px solid #000;
+    background-color: #C3E191;
+    text-align: center;
+}
+.table_acoes .t_botoes{
+    width: 100px;
+}
+
+/*
+Idem aqui. Mas como os IDs são únicos, não deu problema.
+.table_acoes #botao_editar_trabalho, #botao_enviar_trabalho,
+#botao_exportar_pdf, #botao_voltar{
+    width: 100%;
+}
+*/
+
+.table_acoes #botao_editar_trabalho,
+.table_acoes #botao_enviar_trabalho,
+.table_acoes #botao_validar_trabalho,
+.table_acoes #botao_invalidar_trabalho,
+.table_acoes #botao_corrigir_trabalho,
+.table_acoes #botao_exportar_pdf,
+.table_acoes #botao_voltar{
+    width: 100%;
+}
+<<<<<<< HEAD
+
+=======
+.cont_pdf{
+    width: 210mm;
+    height: 297mm;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FFFFFF;
+
+    /*border: 1px solid #C3E191;
+    border-radius: 7px;*/
+}
+>>>>>>> f9b405479b0aa4f88530d1c9535f52b197308e2e
+.tela_inscricao_trabalho{
+    width: 210mm;
+    height: auto;
+    margin: 5px auto;
+    padding: 10px;
+    /*border: 1px solid #C3E191;
+    border-radius: 7px;*/
+}
+
+.inscr_trab_turno{
+    width: 500px auto;
+    margin: 10px auto;
+    border: none;
+}
+.titulo_turno{
+    width: 165px;
+    text-align: right;
+    border: none;
+}
+.radio_turno{
+    width: 80px;
+    text-align: center;
+    vertical-align: center;
+    border: none;
+}
+.info_turno{
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 5px;
+    text-align: center;
+}
+.alinha_caixas{
+    width: 550px;
+    border: none;
+}
+.tr_co{
+    border: none;
+    margin-bottom: 12px;
+}
+.caixa_co{
+    width: auto;
+    border: none;
+}
+.caixa_botao{
+    border: none;
+}
+
+.info_inscr_trab{
+    width: 94%;
+    text-align: justify;
+}
+<<<<<<< HEAD
+=======
+
+.logo_pdf{
+    background-image : url(../../../content/logo.png);
+    float: left;
+}
+.trab_ac_pdf, .trab_ac_pdf2{
+    text-align: right;
+    font-size: 12px;
+    font-family: 'Times New Roman';
+}
+.trab_ac_pdf2{
+    font-weight: bold;
+}
+.trabalho_pdf_titulo{
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+    font-family: 'Times New Roman';
+}
+.trabalho_pdf{
+    text-align: center;
+    font-size: 17px;
+    font-family: 'Times New Roman';
+}
+.trabalho_pdf_resumo{
+    text-align: justify;
+    font-size: 17px;
+    font-family: 'Times New Roman';
+}
+.trabalho_pdf_rodape{
+    text-align: left;
+    margin-left: 30px;
+    font-size: 17px;
+    font-family: 'Times New Roman';
+}
+ .botao_gerar_pdf{
+    margin-bottom: 12%;
+ }
+>>>>>>> f9b405479b0aa4f88530d1c9535f52b197308e2e
+ .aviso{
+    color:red;
+    font-size:14px;
+ }
+
+#footer{
+    float:left;
+    background:#FFF;
+    color:#999;
+    text-align:center;
+    font-family:arial;
+    font-size:10px;
+    width:100%;
+    margin:15px auto;
+    padding:10px;
+    margin-top:0px;
+    /*border-radius*/
+    -webkit-border-radius:7px;
+    -moz-border-radius:7px;
+    border-radius:7px;
+    text-decoration:none;
+    /*box-shadow*/
+    -webkit-box-shadow:0 0 10px rgba(0,51,0,.83);
+    -moz-box-shadow:0 0 10px rgba(0,51,0,.83);
+    box-shadow:0 0 10px rgba(0,51,0,.83);
+}
+#footer a{
+    color:#999;
+    text-decoration:none;
+}
+#footer a:hover{
+    color:#333;
+    text-decoration:underline;
+}
+
+.li_autor {
+  font-size: 14px;
+}

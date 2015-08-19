@@ -1,0 +1,1 @@
+<td class="logo_pdf" align="left"><img src="../../../content/logo.png" style="width: 235px; heigth: 85px;" /></td>

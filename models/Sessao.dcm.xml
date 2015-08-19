@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Sessao" table="sessao">
+    <id name="idSessao" type="integer" column="id_sessao">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="numero" type="integer" column="numero" nullable="true"/>
+    <field name="nome" type="string" column="nome" length="10" nullable="true"/>
+    <field name="sala" type="integer" column="sala" nullable="true"/>
+    <field name="nomeSala" type="string" column="nome_sala" length="100" nullable="true"/>
+    <field name="andar" type="integer" column="andar" nullable="true"/>
+    <field name="nomeAndar" type="string" column="nome_andar" length="50" nullable="true"/>
+    <field name="data" type="date" column="data" nullable="true"/>
+    <field name="horaIni" type="time" column="hora_ini" nullable="true"/>
+    <field name="horaFim" type="time" column="hora_fim" nullable="true"/>
+    <field name="status" type="integer" column="status" nullable="true"/>
+    <many-to-one field="fkModalidade" target-entity="Modalidade">
+      <join-columns>
+        <join-column name="fk_modalidade" referenced-column-name="id_modalidade"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-many field="fkAvaliador" target-entity="Avaliador" inversed-by="fkSessao">
+      <join-table name="avaliador_sessao">
+        <join-columns>
+          <join-column name="fk_sessao" referenced-column-name="id_sessao"/>
+        </join-columns>
+        <inverse-join-columns>
+          <join-column name="fk_avaliador" referenced-column-name="fk_usuario"/>
+        </inverse-join-columns>
+      </join-table>
+    </many-to-many>
+  </entity>
+</doctrine-mapping>

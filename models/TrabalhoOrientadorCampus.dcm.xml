@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="TrabalhoOrientadorCampus" table="trabalho_orientador_campus">
+    <field name="seq" type="integer" column="seq" nullable="false"/>
+    <field name="emailTrabalho" type="string" column="email_trabalho" length="100" nullable="false"/>
+    <one-to-one field="fkTrabalho" target-entity="Trabalho">
+      <join-columns>
+        <join-column name="fk_trabalho" referenced-column-name="id_trabalho"/>
+      </join-columns>
+    </one-to-one>
+    <many-to-one field="fkOrientador" target-entity="OrientadorCampus">
+      <join-columns>
+        <join-column name="fk_orientador" referenced-column-name="fk_orientador"/>
+        <join-column name="fk_campus" referenced-column-name="fk_campus"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

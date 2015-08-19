@@ -1,0 +1,20 @@
+{
+    "repositories": [
+        {
+            "url": "https://github.com/l3pp4rd/DoctrineExtensions.git",
+            "type": "git"
+        }
+    ],
+    "require": {
+        "twitter/bootstrap": "3.2.*@dev",
+        "frameworks/jquery": "dev-master",
+        "rogeriopradoj/codeigniter": "dev-master",
+        "doctrine/dbal": "~2.4",
+        "symfony/console": "~2.5",
+        "symfony/event-dispatcher": "~2.5",
+        "psr/log": "~1.0",
+        "doctrine/collections": "~1.2",
+        "doctrine/instantiator": "~1.0",
+        "doctrine/orm": "~2.4"
+    }
+}

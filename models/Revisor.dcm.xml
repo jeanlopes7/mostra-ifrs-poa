@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Revisor" table="revisor">
+    <one-to-one field="fkUsuario" target-entity="Usuario">
+      <join-columns>
+        <join-column name="fk_usuario" referenced-column-name="id_usuario"/>
+      </join-columns>
+    </one-to-one>
+    <many-to-one field="fkCampus" target-entity="Campus">
+      <join-columns>
+        <join-column name="fk_campus" referenced-column-name="id_campus"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Voluntario" table="voluntario">
+    <field name="status" type="integer" column="status" nullable="false"/>
+    <field name="observacoes" type="string" column="observacoes" length="200" nullable="true"/>
+    <field name="manha" type="string" column="manha" length="1" nullable="true"/>
+    <field name="tarde" type="string" column="tarde" length="1" nullable="true"/>
+    <field name="noite" type="string" column="noite" length="1" nullable="true"/>
+    <field name="telefone1" type="string" column="telefone1" length="12" nullable="false"/>
+    <field name="telefone2" type="string" column="telefone2" length="12" nullable="true"/>
+    <field name="telefone3" type="string" column="telefone3" length="12" nullable="true"/>
+    <field name="presenca" type="integer" column="presenca" nullable="true"/>
+    <one-to-one field="fkUsuario" target-entity="Usuario">
+      <join-columns>
+        <join-column name="fk_usuario" referenced-column-name="id_usuario"/>
+      </join-columns>
+    </one-to-one>
+    <many-to-one field="fkCurso" target-entity="Curso">
+      <join-columns>
+        <join-column name="fk_curso" referenced-column-name="id_curso"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

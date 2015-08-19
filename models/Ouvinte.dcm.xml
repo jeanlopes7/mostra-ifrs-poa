@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Ouvinte" table="ouvinte">
+    <field name="tipoOuvinte" type="integer" column="tipo_ouvinte" nullable="true"/>
+    <field name="outro" type="string" column="outro" length="200" nullable="true"/>
+    <field name="empresa" type="string" column="empresa" length="100" nullable="true"/>
+    <one-to-one field="fkUsuario" target-entity="Usuario">
+      <join-columns>
+        <join-column name="fk_usuario" referenced-column-name="id_usuario"/>
+      </join-columns>
+    </one-to-one>
+    <many-to-one field="fkInstituicao" target-entity="Instituicao">
+      <join-columns>
+        <join-column name="fk_instituicao" referenced-column-name="id_instituicao"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="fkCurso" target-entity="Curso">
+      <join-columns>
+        <join-column name="fk_curso" referenced-column-name="id_curso"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="fkCampus" target-entity="Campus">
+      <join-columns>
+        <join-column name="fk_campus" referenced-column-name="id_campus"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

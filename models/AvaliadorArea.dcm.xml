@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AvaliadorArea" table="avaliador_area">
+    <id name="fkArea" type="integer" column="fk_area"/>
+    <id name="fkAvaliador" type="integer" column="fk_avaliador"/>
+  </entity>
+</doctrine-mapping>

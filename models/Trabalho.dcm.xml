@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Trabalho" table="trabalho">
+    <id name="idTrabalho" type="integer" column="id_trabalho">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="nivel" type="integer" column="nivel" nullable="true"/>
+    <field name="titulo" type="string" column="titulo" length="255" nullable="true"/>
+    <field name="tituloOrdenar" type="string" column="titulo_ordenar" length="255" nullable="true"/>
+    <field name="palavra1" type="string" column="palavra1" length="40" nullable="true"/>
+    <field name="palavra2" type="string" column="palavra2" length="40" nullable="true"/>
+    <field name="palavra3" type="string" column="palavra3" length="40" nullable="true"/>
+    <field name="apoiadores" type="string" column="apoiadores" length="100" nullable="true"/>
+    <field name="resumo" type="text" column="resumo" nullable="true"/>
+    <field name="resumo2" type="text" column="resumo2" nullable="true"/>
+    <field name="status" type="integer" column="status" nullable="true"/>
+    <field name="dataCadastro" type="datetime" column="data_cadastro" nullable="true"/>
+    <field name="dataAtualizacao" type="datetime" column="data_atualizacao" nullable="true"/>
+    <field name="ipCadastro" type="string" column="ip_cadastro" length="15" nullable="true"/>
+    <field name="ipAtualizacao" type="string" column="ip_atualizacao" length="15" nullable="true"/>
+    <field name="seqSessao" type="integer" column="seq_sessao" nullable="true"/>
+    <field name="nota" type="float" column="nota" nullable="true"/>
+    <field name="premiado" type="integer" column="premiado" nullable="true"/>
+    <field name="fkArea" type="integer" column="fk_area" nullable="true"/>
+    <many-to-one field="fkSessao" target-entity="Sessao">
+      <join-columns>
+        <join-column name="fk_sessao" referenced-column-name="id_sessao"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="fkModalidade" target-entity="Modalidade">
+      <join-columns>
+        <join-column name="fk_modalidade" referenced-column-name="id_modalidade"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="fkCategoria" target-entity="Categoria">
+      <join-columns>
+        <join-column name="fk_categoria" referenced-column-name="id_categoria"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

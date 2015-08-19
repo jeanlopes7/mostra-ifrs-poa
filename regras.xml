@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE regras [
+<!ELEMENT regras (regras_dos_papeis, regras_dos_usuarios) >
+<!ELEMENT regras_dos_papeis (regra_do_papel*)>
+<!ELEMENT regra_do_papel (id, action, papeis)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT action (#PCDATA)>
+<!ELEMENT papeis (papel*)>
+<!ELEMENT papel (#PCDATA)>
+
+<!ELEMENT regras_dos_usuarios (regra_do_usuario*) >
+<!ELEMENT regra_do_usuario (id, action, user_ids) >
+
+<!ELEMENT user_ids (user_id*)>
+<!ELEMENT user_id (#PCDATA)>
+]>
+<!-- Atenção, deixar pelo menos duas tags em cada uma, na regras_dos_papeis e regras_dos_usuarios -->
+<!--
+
+Todos os papéis:
+
+autor
+orientador
+revisor
+avaliador
+voluntario
+organizador
+ouvinte
+
+ -->
+<regras>
+    <regras_dos_papeis>
+        <regra_do_papel>
+            <id>1</id>
+            <action>homologar_orientador</action>
+            <papeis>
+                <papel>organizador</papel>
+            </papeis>
+        </regra_do_papel>
+        
+        <regra_do_papel>
+            <id>2</id>
+            <action>homologar_coorientador</action>
+            <papeis>
+                <papel>organizador</papel>
+            </papeis>
+        </regra_do_papel>
+        
+        <regra_do_papel>
+            <id>3</id>
+            <action>autor_ctr/index</action>
+            <papeis>
+                <papel>autor</papel>
+            </papeis>
+        </regra_do_papel>
+
+        <regra_do_papel>
+            <id>4</id>
+            <action>usuario_ctr/index</action>
+            <papeis>
+                <papel>autor</papel>
+                <papel>orientador</papel>
+                <papel>revisor</papel>
+                <papel>avaliador</papel>
+                <papel>voluntario</papel>
+                <papel>ouvinte</papel>
+            </papeis>
+        </regra_do_papel>
+
+        <regra_do_papel>
+            <id>5</id>
+            <action>autor_ctr/inscricao_incremental</action>            
+            <papeis>
+                <papel>orientador</papel>
+                <papel>revisor</papel>
+                <papel>avaliador</papel>
+                <papel>voluntario</papel>
+                <papel>ouvinte</papel>
+            </papeis>
+        </regra_do_papel>
+
+        <regra_do_papel>
+            <id>6</id>
+            <action>trabalho_ctr/inscricao</action>
+            <papeis>
+                <papel>autor</papel>
+            </papeis>
+        </regra_do_papel>
+        
+        <regra_do_papel>
+            <id>7</id>
+            <action>orientador_ctr/index</action>
+            <papeis>
+                <papel>orientador</papel>
+            </papeis>
+        </regra_do_papel>
+        
+        <regra_do_papel>
+            <id>8</id>
+            <action>orientador_ctr/inscricao_incremental</action>            
+            <papeis>
+                <papel>autor</papel>
+                <papel>revisor</papel>
+                <papel>avaliador</papel>
+                <papel>voluntario</papel>
+                <papel>ouvinte</papel>
+            </papeis>
+        </regra_do_papel>
+
+        <regra_do_papel>
+            <id>9</id>
+            <action>usuario_ctr/principal</action>
+            <papeis>
+                <papel>autor</papel>
+                <papel>orientador</papel>
+                <papel>revisor</papel>
+                <papel>avaliador</papel>
+                <papel>voluntario</papel>
+                <papel>ouvinte</papel>
+            </papeis>
+        </regra_do_papel>
+
+        <regra_do_papel>
+            <id>10</id>
+            <action>avaliador_ctr/index</action>
+            <papeis>
+                <papel>avaliador</papel>
+            </papeis>
+        </regra_do_papel>
+
+        <regra_do_papel>
+            <id>11</id>
+            <action>avaliador_ctr/inscricao_incremental</action>
+            <papeis>
+                <papel>autor</papel>
+                <papel>orientador</papel>
+                <papel>revisor</papel>
+                <papel>voluntario</papel>
+                <papel>ouvinte</papel>
+            </papeis>
+        </regra_do_papel>
+
+        
+    </regras_dos_papeis>
+
+  
+    <regras_dos_usuarios>
+        
+        <regra_do_usuario>
+            <id>1</id>
+            <action>homologar_revisor</action>
+            <user_ids>
+                <user_id>2</user_id>
+            </user_ids>
+        </regra_do_usuario>
+
+        <regra_do_usuario>
+            <id>1</id>
+            <action>visualizar_revisor</action>
+            <user_ids>
+                <user_id>2</user_id>
+            </user_ids>
+        </regra_do_usuario>
+            
+    </regras_dos_usuarios>
+</regras>

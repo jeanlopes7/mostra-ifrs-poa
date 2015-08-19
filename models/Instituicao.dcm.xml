@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Instituicao" table="instituicao">
+    <id name="idInstituicao" type="integer" column="id_instituicao">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="nome" type="string" column="nome" length="100" nullable="false"/>
+    <field name="sigla" type="string" column="sigla" length="50" nullable="false"/>
+    <field name="cidade" type="string" column="cidade" length="100" nullable="true"/>
+    <field name="estado" type="string" column="estado" length="2" nullable="false"/>
+    <field name="site" type="string" column="site" length="50" nullable="true"/>
+    <field name="tipo" type="integer" column="tipo" nullable="false"/>
+  </entity>
+</doctrine-mapping>

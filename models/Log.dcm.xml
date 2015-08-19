@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Log" table="log">
+    <id name="idLog" type="integer" column="id_log">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="tabela" type="string" column="tabela" length="100" nullable="true"/>
+    <field name="acao" type="string" column="acao" length="100" nullable="true"/>
+    <field name="descricao" type="string" column="descricao" length="100" nullable="true"/>
+    <many-to-one field="fkUsuario" target-entity="Usuario">
+      <join-columns>
+        <join-column name="fk_usuario" referenced-column-name="id_usuario"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>
