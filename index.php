@@ -1,8 +1,4 @@
 <?php
-<<<<<<< HEAD
-=======
-//testando o pull request
->>>>>>> f9b405479b0aa4f88530d1c9535f52b197308e2e
 //require '../psysh';
 // API http://apigen.juzna.cz/doc/EllisLab/CodeIgniter/index.html
 /*
